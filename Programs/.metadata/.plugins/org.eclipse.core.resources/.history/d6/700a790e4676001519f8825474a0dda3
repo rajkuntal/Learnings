@@ -1,0 +1,19 @@
+
+public class SingletonClass {
+
+	private static SingletonClass obj = null;
+	
+	private SingletonClass() {};
+	
+	public static SingletonClass getInstence() {
+		if(obj == null)
+		{
+			synchronized (SingletonClass.class) {
+				obj = new SingletonClass();
+			}
+		}
+		
+		return obj;		
+	}
+	
+}

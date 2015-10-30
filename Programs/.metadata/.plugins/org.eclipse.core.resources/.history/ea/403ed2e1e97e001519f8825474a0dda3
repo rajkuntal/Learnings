@@ -1,0 +1,54 @@
+package graph;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class GraphImplementation {
+
+	public static void main(String[] args) {
+		GraphNode n1 = new GraphNode(1);
+		GraphNode n2 = new GraphNode(2);
+		GraphNode n3 = new GraphNode(3);
+		GraphNode n4 = new GraphNode(4);
+		GraphNode n5 = new GraphNode(5);
+		
+		GraphNode[] n1n = {n2,n3};
+		GraphNode[] n2n = {n3,n1};
+		GraphNode[] n3n = {n4,n5};
+		
+		n1.SetNeibhours(n1n);
+		n2.SetNeibhours(n2n);
+		n3.SetNeibhours(n3n);
+		
+		GraphImplementation obj1 = new GraphImplementation();
+		
+		obj1.bfs(n3);
+	}
+	
+	public void bfs(GraphNode n) {
+		
+		Queue<GraphNode> q = new LinkedList<>();
+		q.add(n);
+		n.visited = true;
+		while(!q.isEmpty()){
+			GraphNode nd = q.poll();
+			System.out.print(nd + "   ");
+			if(nd.neibhours != null){
+				for(GraphNode gn : nd.neibhours){
+					if(!gn.visited){
+						q.add(gn);
+						gn.visited = true;
+					}
+				}
+			}
+		}
+	}
+	
+	public void dfs() {
+		
+	}
+	
+	public void shortestPath() {
+		
+	}
+}

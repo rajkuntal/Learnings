@@ -1,0 +1,24 @@
+
+public class StringQuestion {
+
+	public static void main(String[] args) {
+		
+		String S1 = "Pingpong";
+		
+		String S2 = new String("Pingpong");
+		
+		String S3 = "pong";
+		
+		System.out.println(S1 == S2);
+		
+		System.out.println(S1 == S2.intern());
+		
+		System.out.println(S1.intern() == S2.intern());
+		
+		System.out.println(S1 == "Pong" + S3);
+		
+		System.out.println(S1.intern() == "Pong" + S3.intern());
+		
+		System.out.println(S1.intern() == ("Pong" + S3).intern());
+	}
+}

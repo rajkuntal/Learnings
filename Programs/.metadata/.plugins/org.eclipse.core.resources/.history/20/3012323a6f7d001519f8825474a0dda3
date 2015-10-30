@@ -1,0 +1,43 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BSTRangeQuestion {
+	
+	class BSTNode{
+		int data;
+		BSTNode left;
+		BSTNode right;
+		
+		public BSTNode(int i) {
+			// TODO Auto-generated constructor stub
+			data = i;
+			left = null;
+			right = null;
+		}
+	};
+
+	BSTNode root = null;
+	
+	public void insertElement(int d) {
+		if(this.root == null)
+			root = new BSTNode(d);
+		Queue<BSTNode> q = new LinkedList<>();
+		q.add(root);
+		while(!q.isEmpty()){
+			BSTNode node = q.poll();
+			if(node.data > d){
+				if(node.left != null)
+					q.add(node.left);
+				else
+					node.left = new BSTNode(d);
+			}
+			else{
+				if(node.right != null)
+					q.add(node.right);
+				else
+					node.right = new BSTNode(d);
+			}
+		}
+			
+	}
+}

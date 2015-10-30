@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public int levelRec(int i, Queue&lt;TreeNode&gt; q2)&apos; from &apos;TreeProblem.levelOrder()&apos; to &apos;TreeProblem&apos;&#x0D;&#x0A;- Original project: &apos;ArrayProblems&apos;&#x0D;&#x0A;- Method name: &apos;levelRec&apos;&#x0D;&#x0A;- Destination type: &apos;TreeProblem&apos;&#x0D;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;levelRec&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;{TreeProblem.java" name="levelRec" replace="false" selection="2162 286" stamp="1446020768284" version="1.0" visibility="1"/>
+</session>

@@ -1,0 +1,20 @@
+package graph;
+
+public class GraphImplementation {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void bfs() {
+		
+	}
+	
+	public void dfs() {
+		
+	}
+	
+	public void shortestPath() {
+		
+	}
+}

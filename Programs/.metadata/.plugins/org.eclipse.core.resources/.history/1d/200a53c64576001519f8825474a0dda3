@@ -1,0 +1,6 @@
+
+public class SingletonClass {
+
+	SingletonClass obj = null;
+	
+}

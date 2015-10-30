@@ -1,0 +1,45 @@
+
+public class PrintNumbers {
+	
+	int i = 0;
+	
+	public static void main(String[] args) {
+		
+		Thread th1 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				
+			}
+		});
+		
+		Thread th2 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				
+			}
+		});
+	}
+	
+	public synchronized void odd() {
+		while(i % 2 != 0)
+		{
+			
+		}
+		i++;
+		System.out.println("i :" + i + " Thread Name :" + Thread.currentThread().getName());
+	}
+	
+	public synchronized void even() {
+		while(i % 2 != 0)
+		{
+			
+		}
+		i++;
+		System.out.println("i :" + i + " Thread Name :" + Thread.currentThread().getName());
+	}
+
+}

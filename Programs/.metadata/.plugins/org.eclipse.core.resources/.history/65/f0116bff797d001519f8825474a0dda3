@@ -1,0 +1,128 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BSTRangeQuestion {
+	
+	class BSTNode{
+		int data;
+		BSTNode left;
+		BSTNode right;
+		
+		public BSTNode(int i) {
+			// TODO Auto-generated constructor stub
+			data = i;
+			left = null;
+			right = null;
+		}
+	};
+
+	BSTNode root = null;
+	
+	public static void main(String[] args) {
+		
+		BSTRangeQuestion obj = new BSTRangeQuestion();
+		/*obj.insertElement(56);
+		obj.insertElement(28);
+		obj.insertElement(89);
+		obj.insertElement(12);
+		obj.insertElement(20);
+		obj.insertElement(86);
+		obj.insertElement(18);
+		obj.insertElement(95);
+		obj.insertElement(60);
+		obj.insertElement(50);
+		obj.insertElement(25);*/
+		//obj.insertElement(45);
+		
+		
+		obj.doHere();
+		System.out.println();
+		obj.findRange(40, 80);
+		
+	}
+	
+	public void doHere() {
+		//InsertElementRecc(this.root, 45);
+		int[] arr = {12,28,50,56,86,89,95};
+		sortedArrToBST(root, arr);
+		inOrder(this.root);
+	}
+	
+	public void insertElement(int d) {
+		if(this.root == null)
+			this.root = new BSTNode(d);
+		else{
+			Queue<BSTNode> q = new LinkedList<>();
+			q.add(this.root);
+			while(!q.isEmpty()){
+				BSTNode node = q.poll();
+				if(node.data > d){
+					if(node.left != null)
+						q.add(node.left);
+					else
+						node.left = new BSTNode(d);
+				}
+				else{
+					if(node.right != null)
+						q.add(node.right);
+					else
+						node.right = new BSTNode(d);
+				}
+			}
+		}					
+	}
+	
+	public void InsertElementRecc(BSTNode root ,int d) {
+		if(root.data > d){
+			if(root.left == null)
+				root.left = new BSTNode(d);
+			else
+				InsertElementRecc(root.left, d);
+		}
+		if(root.data < d){
+			if(root.right == null)
+				root.right = new BSTNode(d);
+			else
+				InsertElementRecc(root.right, d);
+		}
+			
+	}
+	
+	public void inOrder(BSTNode root) {
+		if(root != null){
+			inOrder(root.left);
+			System.out.print(root.data + " ");
+			inOrder(root.right);
+		}
+	}
+	
+	public void findRange(int min, int max) {
+		Queue<BSTNode> q = new LinkedList<>();
+		q.add(this.root);
+		while(!q.isEmpty()){
+			BSTNode node = q.poll();
+			if(node.data >= min && node.left != null){
+				q.add(node.left);
+			}
+			if(node.data <= max && node.right != null)
+				q.add(node.right);
+			
+			if(node.data >= min && node.data <= max)
+				System.out.print(node.data + " ");
+		}
+	}
+	
+	public BSTNode sortedArrToBST(int[] arr, int start, int end) {
+		
+		if(start > end)
+			return null;
+		
+			int mid = (start+end)/2;
+			root = new BSTNode(mid);
+			root.left = sortedArrToBST(arr, start, mid-1);
+			root.right = sortedArrToBST(arr, mid+1, end);
+		
+		return root;
+		
+	}
+}
