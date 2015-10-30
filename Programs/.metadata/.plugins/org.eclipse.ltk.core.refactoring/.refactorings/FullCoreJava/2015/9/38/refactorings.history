@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;FibonicSeriesQuestion.java&apos; to &apos;PermutationWords.java&apos;&#x0D;&#x0A;- Original project: &apos;FullCoreJava&apos;&#x0D;&#x0A;- Original element: &apos;FibonicSeriesQuestion.java&apos;&#x0D;&#x0A;- Renamed element: &apos;PermutationWords.java&apos;" description="Rename compilation unit &apos;FibonicSeriesQuestion.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{FibonicSeriesQuestion.java" name="PermutationWords.java" references="false" stamp="1442317762386" version="1.0"/>
-</session>

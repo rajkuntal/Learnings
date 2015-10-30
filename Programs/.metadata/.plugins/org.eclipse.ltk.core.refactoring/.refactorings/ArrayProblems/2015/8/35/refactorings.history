@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract method &apos;public static void prepareGraph(String [] [] contact)&apos; from &apos;FindCommonContacts.main()&apos; to &apos;FindCommonContacts&apos;&#x0D;&#x0A;- Original project: &apos;ArrayProblems&apos;&#x0D;&#x0A;- Method name: &apos;prepareGraph&apos;&#x0D;&#x0A;- Destination type: &apos;FindCommonContacts&apos;&#x0D;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;prepareGraph&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;{FindCommonContacts.java" name="prepareGraph" replace="false" selection="1255 660" stamp="1440762311661" version="1.0" visibility="1"/>
-</session>
