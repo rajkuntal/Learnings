@@ -1,6 +1,6 @@
-package linkedListProblems;
+package com.raju.linkedListProblems;
 
-import singlyLinkedList.SinglyLLNode;
+import com.raju.singlyLinkedList.SinglyLLNode;
 
 public class ImpmtStackUsingLL {
 	SinglyLLNode head;

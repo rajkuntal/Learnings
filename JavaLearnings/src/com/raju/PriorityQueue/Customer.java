@@ -1,4 +1,4 @@
-package PriorityQueue;
+package com.raju.PriorityQueue;
 
 public class Customer {
     
